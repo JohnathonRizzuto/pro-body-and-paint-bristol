@@ -143,6 +143,11 @@ nav ul a:hover{color:var(--text)}
 .car-svg{width:100%;height:auto;filter:drop-shadow(0 24px 26px rgba(0,0,0,.55))}
 .car-card .cap{margin-top:14px;color:var(--muted);font-size:.9rem;display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:14px;font-family:var(--font-head);letter-spacing:.04em}
 .car-card .cap b{color:var(--text);font-weight:600}
+.hero-photo{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 40px 80px -30px rgba(0,0,0,.8)}
+.hero-photo img{width:100%;height:100%;max-height:540px;object-fit:cover;filter:saturate(.95) contrast(1.04)}
+.hero-photo-cap{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;padding:16px 22px;background:linear-gradient(0deg,rgba(8,9,12,.85),rgba(8,9,12,0));font-family:var(--font-head);letter-spacing:.06em;text-transform:uppercase;font-size:.82rem}
+.hero-photo-cap span{color:var(--chrome)}
+.hero-photo-cap b{color:var(--accent);font-weight:600}
 
 /* photo placeholder */
 .photo-ph{background:#000;border:1px solid var(--line);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#5a6470;min-height:200px;text-align:center;padding:24px}
@@ -268,7 +273,6 @@ footer{background:var(--bg-foot);border-top:1px solid var(--line);padding:64px 0
     </a>
     <nav><ul>
       <li><a href="#services">Services</a></li>
-      <li><a href="#showcase">Project Car</a></li>
       <li><a href="#process">Process</a></li>
       <li><a href="#reviews">Reviews</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -292,99 +296,24 @@ footer{background:var(--bg-foot);border-top:1px solid var(--line);padding:64px 0
       <p class="lead">From fender-benders to frame-off classics, Pro Body &amp; Paint in Bristol has been straightening steel and laying flawless paint for nearly two decades. Bring us the dent, the scratch, or the dream build &mdash; we&rsquo;ll bring back the shine.</p>
       <div class="hero-cta">
         <a href="tel:+16305538970" class="btn btn-primary btn-lg">Get a Free Estimate</a>
-        <a href="#showcase" class="btn btn-ghost btn-lg">See Our Work</a>
+        <a href="#services" class="btn btn-ghost btn-lg">See Our Work</a>
       </div>
       <div class="hero-trust">
         <div class="t"><b class="tnum">2007</b><span>Bristol Owned</span></div>
-        <div class="t"><b class="tnum">96%</b><span>Would Recommend</span></div>
         <div class="t"><b class="tnum">1,000s</b><span>Panels Painted</span></div>
+        <div class="t"><b class="tnum">Free</b><span>Estimates</span></div>
       </div>
     </div>
     <div class="hero-stage reveal">
-      <div class="car-card">
-        <span class="tag">Shop Project Car · <b>Owner&rsquo;s Pride</b></span>
-        <h3>1963 Chevy II Nova SS Convertible</h3>
-        <!-- bespoke illustration of the shop's showcase classic; not a placeholder -->
-        <svg class="car-svg" viewBox="0 0 640 290" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="White 1963 Chevy II Nova SS convertible illustration">
-          <defs>
-            <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#ffffff"/><stop offset="0.55" stop-color="#eef1f4"/><stop offset="1" stop-color="#c7ccd3"/>
-            </linearGradient>
-            <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#aeb9c6"/><stop offset="1" stop-color="#5f6b78"/>
-            </linearGradient>
-            <radialGradient id="floor" cx="0.5" cy="0.5" r="0.5">
-              <stop offset="0" stop-color="#000" stop-opacity="0.55"/><stop offset="1" stop-color="#000" stop-opacity="0"/>
-            </radialGradient>
-          </defs>
-          <ellipse cx="320" cy="250" rx="290" ry="26" fill="url(#floor)"/>
-          <!-- lower body / rocker -->
-          <path d="M40 196 C60 196 70 190 96 188 L150 184 C190 150 250 138 320 138 C386 138 430 150 470 176 L556 184 C588 188 604 196 604 206 L604 214 C604 220 598 224 590 224 L54 224 C44 224 38 218 38 210 Z" fill="url(#body)" stroke="#aab1ba" stroke-width="2"/>
-          <!-- belt chrome line -->
-          <path d="M70 190 L560 190" fill="none" stroke="#9aa1aa" stroke-width="2" opacity="0.7"/>
-          <!-- side spear chrome -->
-          <path d="M150 200 L520 200" fill="none" stroke="#c9ced6" stroke-width="3"/>
-          <path d="M150 200 L520 200" fill="none" stroke="#7e8893" stroke-width="1"/>
-          <!-- red SS pinstripe -->
-          <path d="M158 207 L512 207" fill="none" stroke="#d8261d" stroke-width="2.4"/>
-          <!-- top-down windshield frame + tonneau -->
-          <path d="M236 138 C250 116 268 106 292 104 L372 104 C396 106 416 120 430 140 L236 140 Z" fill="url(#glass)" opacity="0.92"/>
-          <path d="M236 140 C250 118 268 108 292 106 L372 106 C396 108 416 122 430 142" fill="none" stroke="#cdd3db" stroke-width="3"/>
-          <!-- folded white top behind seats -->
-          <path d="M430 140 C452 140 470 152 478 170 L432 170 C424 156 420 146 430 140 Z" fill="#e7eaee" stroke="#b6bcc4" stroke-width="1.5"/>
-          <!-- front + rear chrome bumpers -->
-          <path d="M40 200 C36 200 34 204 34 208 L34 214 C34 218 38 220 44 220" fill="none" stroke="#cdd3db" stroke-width="5"/>
-          <path d="M602 196 C610 196 612 200 612 206 L612 214 C612 218 608 222 600 222" fill="none" stroke="#cdd3db" stroke-width="5"/>
-          <!-- headlight + tail -->
-          <circle cx="58" cy="184" r="9" fill="#eef3f7" stroke="#b6bcc4" stroke-width="2"/>
-          <rect x="582" y="178" width="14" height="11" rx="2" fill="#d8261d"/>
-          <!-- wheels: chrome finned hubcaps + whitewalls -->
-          <g>
-            <circle cx="170" cy="216" r="46" fill="#15181d"/><circle cx="170" cy="216" r="46" fill="none" stroke="#0a0c0f" stroke-width="2"/>
-            <circle cx="170" cy="216" r="34" fill="#f4f6f8"/><circle cx="170" cy="216" r="25" fill="#cdd3db"/>
-            <circle cx="170" cy="216" r="25" fill="none" stroke="#8b939d" stroke-width="2"/><circle cx="170" cy="216" r="7" fill="#7e8893"/>
-          </g>
-          <g>
-            <circle cx="470" cy="216" r="46" fill="#15181d"/><circle cx="470" cy="216" r="46" fill="none" stroke="#0a0c0f" stroke-width="2"/>
-            <circle cx="470" cy="216" r="34" fill="#f4f6f8"/><circle cx="470" cy="216" r="25" fill="#cdd3db"/>
-            <circle cx="470" cy="216" r="25" fill="none" stroke="#8b939d" stroke-width="2"/><circle cx="470" cy="216" r="7" fill="#7e8893"/>
-          </g>
-          <!-- door line -->
-          <path d="M318 150 L318 198" stroke="#aab1ba" stroke-width="1.5" opacity="0.6"/>
-        </svg>
-        <div class="cap"><span>Ermine White · Restored in-house</span><b>Bristol, IL</b></div>
+      <div class="hero-photo">
+        <img src="img/paint-spray.jpg" alt="Technician laying fresh paint on a car panel in the booth at Pro Body and Paint">
+        <div class="hero-photo-cap"><span>In the booth</span><b>Bristol, IL</b></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== SHOWCASE / PROJECT CAR ===== -->
-<section id="showcase">
-  <div class="wrap showcase-grid">
-    <div class="reveal">
-      <div class="eyebrow">The Project Car</div>
-      <h2>This Is the Kind of Finish We Chase</h2>
-      <p class="lead">That &rsquo;63 Nova SS isn&rsquo;t a stock photo &mdash; it&rsquo;s the bar. Mirror-straight panels, deep show-quality white, chrome that throws light across the booth. Whether your ride is a daily driver or a weekend classic, that&rsquo;s the standard every job leaves on.</p>
-      <ul class="spec-list">
-        <li><b>Show-Quality Paint</b><span>Color-sanded &amp; buffed</span></li>
-        <li><b>Classic Restoration</b><span>Rust, metal &amp; trim work</span></li>
-        <li><b>Factory Color Match</b><span>Computerized blending</span></li>
-        <li><b>Done In-House</b><span>Body, prep &amp; booth</span></li>
-      </ul>
-      <div class="hero-cta" style="margin-top:32px">
-        <a href="tel:+16305538970" class="btn btn-primary">Talk About Your Build</a>
-      </div>
-    </div>
-    <div class="reveal">
-      <!-- owner's real project photos go here -->
-      <div class="photo-ph" style="min-height:340px">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h4l2-2h6l2 2h4v12H3z"/><circle cx="12" cy="13" r="4"/></svg>
-        <span>Photo: The Nova &amp; recent builds</span>
-      </div>
-      <!-- REPLACE WITH REAL PHOTO: owner's actual Nova SS / completed project cars -->
-    </div>
-  </div>
-</section>
+
 
 <!-- ===== SERVICES ===== -->
 <section id="services" style="background:var(--bg)">
@@ -407,7 +336,7 @@ footer{background:var(--bg-foot);border-top:1px solid var(--line);padding:64px 0
       <article class="svc reveal">
         <!-- REPLACE WITH REAL PHOTO: a restored classic in the shop -->
         <div class="photo-ph"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h4l2-2h6l2 2h4v12H3z"/><circle cx="12" cy="13" r="4"/></svg><span>Photo: Classic restoration</span></div>
-        <div class="svc-body"><h3><i></i>Classic &amp; Restoration</h3><p>Muscle cars, hot rods, weekend cruisers. Rust repair, panel fab, trim and that show-day finish &mdash; like the shop Nova.</p></div>
+        <div class="svc-body"><h3><i></i>Classic &amp; Restoration</h3><p>Muscle cars, hot rods, weekend cruisers. Rust repair, panel fab, trim and that show-day finish that turns heads.</p></div>
       </article>
       <article class="svc reveal">
         <img class="svc-img" src="img/prep-sand.jpg" alt="Auto body technician grinding and prepping a car body for new paint">
@@ -458,7 +387,7 @@ footer{background:var(--bg-foot);border-top:1px solid var(--line);padding:64px 0
       <div class="badge-row">
         <span class="badge"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5L5.5 27l2-7L2 9h7z"/></svg>Locally Owned</span>
         <span class="badge"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5L5.5 27l2-7L2 9h7z"/></svg>Free Estimates</span>
-        <span class="badge"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5L5.5 27l2-7L2 9h7z"/></svg>Insurance Welcome</span>
+        
       </div>
     </div>
   </div>
@@ -476,7 +405,7 @@ footer{background:var(--bg-foot);border-top:1px solid var(--line);padding:64px 0
       <div class="rev reveal"><div class="stars">★★★★★</div><p>&ldquo;Brought in an old project that needed a lot of love. They took their time and it came out looking brand new.&rdquo;</p><div class="who">— Dana, Bristol</div></div>
       <div class="rev reveal"><div class="stars">★★★★★</div><p>&ldquo;Honest shop. John told me what really needed doing instead of running up the bill. I&rsquo;ll send everyone here.&rdquo;</p><div class="who">— Carlos, Plano</div></div>
     </div>
-    <p style="text-align:center;color:var(--muted);margin-top:26px;font-size:.9rem">Themes paraphrased from public reviews · 96% recommend on Facebook</p>
+    <p style="text-align:center;color:var(--muted);margin-top:26px;font-size:.9rem">Themes paraphrased from public reviews</p>
   </div>
 </section>
 
@@ -532,7 +461,7 @@ footer{background:var(--bg-foot);border-top:1px solid var(--line);padding:64px 0
       <a href="#services">Collision Repair</a>
       <a href="#services">Custom Paint</a>
       <a href="#services">Color Matching</a>
-      <a href="#showcase">Classic Restoration</a>
+      <a href="#services">Classic Restoration</a>
     </div>
     <div class="foot-col">
       <h4>Visit</h4>
