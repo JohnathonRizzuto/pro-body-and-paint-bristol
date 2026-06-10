@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pro-body-and-paint-bristol.vercel.app/sitemap.xml
